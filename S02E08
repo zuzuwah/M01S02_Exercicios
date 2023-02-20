@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace S02E08
+{
+
+public class Ficha
+    {
+        private static DateTime dataNascimento;
+
+        static void Main (string[] args){
+        
+        Pessoa pessoa01 = new Pessoa("Rafael", dataNascimento);
+
+        pessoa01.MostrarIdade();
+
+
+
+
+        Console.ReadKey();
+
+
+
+    }
+    }
+
+
+
+    public class Pessoa
+    {
+
+         public string Nome { get; set; } 
+         public DateTime DataNascimento { get; set; } 
+         public Pessoa (string nome, DateTime dataNascimento) 
+         { 
+             Nome = nome; 
+             DataNascimento = dataNascimento; 
+         } 
+
+         public void MostrarIdade() 
+         { 
+              
+             Console.WriteLine($"Nome: {Nome} tem a idade de {CalcularIdade()} anos"); 
+         } 
+
+         private int CalcularIdade() 
+         { 
+              
+             var dataNascimento = new DateTime(1975, 10, 29);
+             var dataAtual = DateTime.Now;
+             var idade = dataAtual.Year - dataNascimento.Year;
+             if (dataNascimento > dataAtual.AddYears(-idade))
+        {
+            idade--;
+        }           
+             return idade; 
+         } 
+    }
+}
