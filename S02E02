@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Escola
+{
+class Escola{
+
+    static void Main (string[] args){
+        
+        Aluno aluno1 = new Aluno(34, "Rafael Taufer", DateTime.Now);
+
+        aluno1.Matricula();
+
+
+
+
+        Console.ReadKey();
+
+
+
+    }
+}
+
+class Aluno
+{
+
+public int id;
+public string nome {get; set; }
+public DateTime dataNascimento{get; set; }
+//bool MenorIdade;
+
+public Aluno ( int id, string nome, DateTime dataNascimento){
+
+    this.id = id;
+    this.nome = nome;
+    this.dataNascimento = new DateTime(1975, 10, 29);
+    //this.MenorIdade = MenorIdade
+
+}
+
+public void Matricula(){
+
+    Console.WriteLine("Segue os seus dados: " + "Código: " + id + " Nome: " + nome + " Data de Nascimento: " + dataNascimento);
+
+}
+
+
+}
+
+}
