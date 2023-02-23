@@ -1,0 +1,35 @@
+namespace S02E04
+{
+    public class Guitarra{
+
+    Guitarra guitarra = new Guitarra ();
+
+    guitarra.Tocar();
+
+    guitarra.Tocar("Do");
+
+  }
+
+    public class Guitarra 
+    {
+        private static string afinacao; 
+        public Guitarra(){ 
+            afinacao = "Sol";
+        }
+
+        public void Tocar(){ 
+            TomAfinado();
+        }
+
+        public void Tocar(string afinacaoAtual){ 
+            afinacao = afinacaoAtual;
+            TomAfinado();
+        }
+
+        private void TomAfinado(){  
+            Console.WriteLine("A guitarra está com afinação em: " + afinacao);
+     
+        }  
+      }
+    
+ }
