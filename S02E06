@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace S02E06
+{
+    public class S02E06{
+        static void Main (string[] args)
+        {
+            var filme = new Filme("Rambo", "Ação");
+            filme.Exibir();
+
+            var filme2 = new Filme();
+                filme2.NomeFilme = "Comando para Matar";
+                filme2.Categoria = "Ação";
+                filme2.Exibir(); 
+
+            var filme3 = new Filme();
+                filme3.NomeFilme = "Para Roma com Amor";
+                filme3.Categoria = "Comédia";
+                filme3.Exibir(); 
+        }
+    }
+
+
+    public class Filme
+    {
+
+        public string NomeFilme{get; set; }
+
+        public string Categoria{get; set; }
+
+        public Filme(){
+
+        }
+    
+
+        public Filme(string nomeFilme, string categoria){
+            NomeFilme = nomeFilme;
+            Categoria = categoria;
+        }
+    
+        public void Exibir(){
+            Console.WriteLine($"Filme {NomeFilme}, Categoria {Categoria}");
+        }
+    }
+}
