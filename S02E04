@@ -1,15 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace S02E04
 {
-    public class Guitarra{
 
-    Guitarra guitarra = new Guitarra ();
+    public class S02E04
+    {
+        static void Main (string[] args){
 
-    guitarra.Tocar();
+        Guitarra guitarra = new Guitarra ();
 
-    guitarra.Tocar("Do");
+        guitarra.Tocar();
 
-  }
+        guitarra.Tocar("Do");
 
+        }
+        
+    }
+    
     public class Guitarra 
     {
         private static string afinacao; 
@@ -28,8 +38,7 @@ namespace S02E04
 
         private void TomAfinado(){  
             Console.WriteLine("A guitarra está com afinação em: " + afinacao);
-     
+            
         }  
-      }
-    
- }
+    }
+} 
