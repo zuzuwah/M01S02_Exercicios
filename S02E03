@@ -1,0 +1,39 @@
+namespace S02E03
+{
+    
+    class Program{
+
+    static void Main (string[] args){
+
+        MensagemCelular _mensagem = new MensagemCelular(9991129, "Olá, sou o Rafael");
+         _mensagem.Executar();
+    }
+    
+}   
+       
+    public class MensagemCelular
+    {
+        public int telefone{get; set;}
+
+        public string mensagem{get; set;}
+
+
+        public MensagemCelular(int Telefone, string Mensagem){
+            this.telefone = Telefone;
+            this.mensagem = Mensagem;
+        }
+
+         private void EnviarMensagemAoTelefone()
+         {
+            Console.WriteLine("Método privado executado na classe");
+            Console.WriteLine($"Telefone {telefone}, Mensagem {mensagem}");
+        }
+
+        public void Executar()
+        {
+            Console.WriteLine("Método executado no console");
+            EnviarMensagemAoTelefone();
+        
+        }
+    }
+}
