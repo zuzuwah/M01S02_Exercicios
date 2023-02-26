@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace S02E07
+{
+    class program{
+    static void Main (string[] args){
+        Animação._animação();
+        Animação._animação("Wall-e");
+
+    }
+
+}
+    public static class Animação
+    {
+        public static void _animação(){
+
+        Console.WriteLine("Animação Frozen");
+
+        }
+
+        public static void _animação(string nomeAnimacao){;
+            Console.WriteLine("Animação " + nomeAnimacao);
+        }
+
+    }
+}
